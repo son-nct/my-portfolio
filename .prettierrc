@@ -1,0 +1,8 @@
+{
+    "singleQuote": true,
+    "semi": false,
+    "vueIndentScriptAndStyle": true,
+    "tabWidth": 3,
+    "endOfLine": "lf",
+    "printWidth": 999999
+  }
