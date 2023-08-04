@@ -41,13 +41,4 @@ export default defineConfig({
       ]
     })
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'font-styles': ['https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap'],
-        },
-      },
-    },
-  },
 })
