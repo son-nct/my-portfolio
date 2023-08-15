@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.active {
+  @apply border-b border-dark;
+}
 
 @layer base {
   body {
