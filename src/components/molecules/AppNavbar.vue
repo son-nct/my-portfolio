@@ -1,15 +1,16 @@
 <script setup lang='ts'>
 import { MotionDirective as motion } from '@vueuse/motion'
+import  GLOBAL_CONFIG from '../../../global-config'
 const vMotion = motion()
-
+const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
 </script>
 
 <template lang="pug">
 div
     header.header__wrapper(
         v-motion
-        :initial="{ opacity: 0, y: 100 }"
-        :enter="{ opacity: 1, y: 0, scale: 1 }"
+        :initial="initial"
+        :enter="enter"
         :delay="200"
     )
         nav
@@ -24,22 +25,22 @@ div
                 href="https://github.com/son-nct"
                 target="_blank"
                 v-motion
-                :initial="{ opacity: 0, y: 100 }"
-                :enter="{ opacity: 1, y: 0, scale: 1 }"
+                :initial="initial"
+                :enter="{ ...enter , scale: 1 }"
                 :hovered="{ scale: 1.5 }"
-                :delay="200"
+                :delay="delay"
             )
-                img(src='@/assets/svg/logo-github.svg' alt='github logo').icon
+                img(src='@/assets/svg/logo-github.svg' alt='github logo' width="32" height="32").icon
             a(
                 href="https://facebook.com"
                 target="_blank"
                 v-motion
-                :initial="{ opacity: 0, y: 100 }"
-                :enter="{ opacity: 1, y: 0, scale: 1 }"
+                :initial="initial"
+                :enter="{ ...enter , scale: 1 }"
                 :hovered="{ scale: 1.5 }"
-                :delay="200"
+                :delay="delay"
             )
-                img(src='@/assets/svg/linkedin.svg' alt='linkedin logo').icon
+                img(src='@/assets/svg/linkedin.svg' alt='linkedin logo' width="32" height="32").icon
 </template>
 
 

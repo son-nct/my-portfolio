@@ -17,6 +17,7 @@ useHead({
     ],
      
 })
+
 </script>
 
 <template lang="pug">
@@ -24,7 +25,7 @@ main.wrapper
   Suspense
     template(#fallback)
       Spinner
-    HomeLayout 
+    HomeLayout
 
 </template>
 

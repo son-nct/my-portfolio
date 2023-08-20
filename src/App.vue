@@ -1,7 +1,8 @@
 <template lang="pug">
 main.main__section
-  navbar
+  AppNavbar
   router-view
+  AppFooter
 </template>
 
 <style lang="scss" scoped>
