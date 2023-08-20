@@ -7,12 +7,15 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Home: typeof import('./src/components/templates/Home.vue')['default']
+    AnimateLink: typeof import('./src/components/atoms/AnimateLink.vue')['default']
+    AnimateText: typeof import('./src/components/atoms/AnimateText.vue')['default']
+    HomeLayout: typeof import('./src/components/templates/HomeLayout.vue')['default']
     Link: typeof import('./src/components/atoms/Link.vue')['default']
     Logo: typeof import('./src/components/atoms/Logo.vue')['default']
     Navbar: typeof import('./src/components/molecules/Navbar.vue')['default']
     Navigation: typeof import('./src/components/organisms/Navigation.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Spinner: typeof import('./src/components/atoms/Spinner.vue')['default']
   }
 }

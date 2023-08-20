@@ -28,7 +28,7 @@ div(
     @apply flex items-center justify-center mt-2;
 
     &__link {
-        @apply w-44 h-16 bg-dark text-light font-bold flex items-center justify-center rounded-full text-2xl;
+        @apply w-44 h-12 bg-dark text-light font-bold flex items-center justify-center rounded-full text-2xl;
     }
 }
 </style>

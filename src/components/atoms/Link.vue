@@ -2,7 +2,6 @@
 const props = defineProps<{
     to: string,
     title: string
-    isActive: boolean
 }>()
 </script>
 
