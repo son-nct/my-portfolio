@@ -1,37 +1,38 @@
 <script setup lang='ts'>
-// Importing assets
+// import image
 import avatarPath from '@/assets/images/avatar.webp';
-import circularText from '@/assets/svg/CircularText.svg';
+import circularTxtPath from '@/assets/svg/CircularText.svg'
+import lightBulbPath from '@/assets/svg/miscellaneous_icons_1.svg'
 
-// Importing configurations and directives
-import GLOBAL_CONFIG from '../../../global-config';
+import  GLOBAL_CONFIG from '../../../global-config'
+const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
 import { MotionDirective as motion } from '@vueuse/motion';
+const vMotion = motion()
 
-// Destructuring configurations
-const { initial, enter, delay } = GLOBAL_CONFIG.motionHook;
 
-// Initializing directives
-const vMotion = motion();
+const avatar = ref<string | null>(null)
+const circularTxt = ref<string | null>(null)
+const lightbulb = ref<string | null>(null)
 
-// Utility method to preload images
-const preloadImage = (src: string): Promise<void> => {
+const loadImages = (src: string): Promise<void> => {
     return new Promise<void>((resolve, reject): void => {
-        const img = new Image();
-        img.src = src;
-        img.onload = resolve;
+        const img = new Image()
+        img.src = src
+        img.onload = () => {
+          resolve();
+        };
         img.onerror = reject;
-    });
+    })
 }
 
-// Use onMounted to preload the images
 onMounted(async () => {
-  await preloadImage(avatarPath);
-  await preloadImage(circularText);
-});
-
-// Directly use the imported paths
-const avatar = ref(avatarPath);
-const circularTxt = ref(circularText);
+  await loadImages(avatarPath)
+  await loadImages(circularTxtPath)
+  await loadImages(lightBulbPath)
+  avatar.value = avatarPath
+  circularTxt.value = circularTxtPath
+  lightbulb.value = lightBulbPath
+})
 </script>
 
 <template lang="pug">
@@ -78,7 +79,10 @@ div
       img(:src="circularTxt" width="250" height="250")
       a.link__custom(href="mailto:sonnct.work@gmail.com")
         | Hire me  
-    
+  .light__bulb__wrapper(v-if="lightbulb")
+    .image__wrapper
+      img(:src="lightbulb" width="150" height="150")
+  
 </template>
 
 
@@ -104,11 +108,11 @@ div
 
       h1 {
         @apply inline-block text-6xl text-dark font-bold capitalize;
-        @apply text-left text-6xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-3xl;
+        @apply text-left text-6xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
       }
 
       p {
-        @apply text-base my-4 font-medium md:text-sm sm:text-xs;
+        @apply lg:text-base my-4 font-medium md:text-sm sm:text-xs;
       }
 
       .btn__wrapper {
@@ -144,9 +148,14 @@ div
     }
 
     .link__custom {
-        @apply flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
-        @apply bg-dark text-light w-20 h-20 rounded-full font-semibold;
+        @apply flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 shadow-md border border-dark border-solid;
+        @apply bg-dark text-light w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark ease-out duration-300;
     }
   }
+}
+
+
+.light__bulb__wrapper {
+  @apply absolute right-8 bottom-8 inline-block w-24;
 }
 </style>
