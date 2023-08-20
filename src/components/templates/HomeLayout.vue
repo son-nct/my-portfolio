@@ -40,7 +40,7 @@ div
   .home__layout__wrapper(v-if="avatar")
     .home__layout__wrapper__content
       .image__wrapper
-        img(:src="avatar" width="600" height="600")
+        img(:src="avatar" width="600" height="600" alt='avatar')
       .content__intro__wrapper
           h1(
             v-motion
@@ -76,12 +76,12 @@ div
               | Contact
   .hire__me__wrapper(v-if="circularTxt")
     .image__wrapper
-      img(:src="circularTxt" width="250" height="250")
+      img(:src="circularTxt" width="250" height="250" alt='circular text')
       a.link__custom(href="mailto:sonnct.work@gmail.com")
         | Hire me  
   .light__bulb__wrapper(v-if="lightbulb")
     .image__wrapper
-      img(:src="lightbulb" width="150" height="150")
+      img(:src="lightbulb" width="150" height="150" alt='light bulb image')
   
 </template>
 
