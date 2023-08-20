@@ -1,43 +1,32 @@
-<script lang='ts'>
+<script setup lang='ts'>
 import { MotionDirective as motion } from '@vueuse/motion'
+const vMotion = motion()
 
-export default {
-  directives: {
-    motion: motion(),
-  },
-}
 </script>
 
 <template lang="pug">
 div
-    header.header__wrapper
-        nav(
-            v-motion
-                :initial="{ opacity: 0, y: 100 }"
-                :enter="{ opacity: 1, y: 0, scale: 1 }"
-                :delay="200"
-        )
+    header.header__wrapper(
+        v-motion
+        :initial="{ opacity: 0, y: 100 }"
+        :enter="{ opacity: 1, y: 0, scale: 1 }"
+        :delay="200"
+    )
+        nav
             Link(:to="'/'" :title="'Home'") 
             Link(:to="'/about'" :title="'About'") 
             Link(:to="'/projects'" :title="'Projects'")
             Link(:to="'/articles'" :title="'Article'") 
         div.header__wrapper__logo
             Logo
-        nav.navbar__social__wrapper(
-            v-motion
-                :initial="{ opacity: 0, y: 100 }"
-                :enter="{ opacity: 1, y: 0, scale: 1 }"
-                :delay="200"
-        )
+        nav.navbar__social__wrapper
             a(
                 href="https://github.com/son-nct"
                 target="_blank"
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, scale: 1 }"
-                :variants="{ custom: { scale: 2 } }"
-                :hovered="{ scale: 1.2 }"
-                :tapped="{scale: 0.9}"
+                :hovered="{ scale: 1.5 }"
                 :delay="200"
             )
                 img(src='@/assets/svg/logo-github.svg' alt='github logo').icon
@@ -47,9 +36,7 @@ div
                 v-motion
                 :initial="{ opacity: 0, y: 100 }"
                 :enter="{ opacity: 1, y: 0, scale: 1 }"
-                :variants="{ custom: { scale: 2 } }"
-                :hovered="{ scale: 1.2 }"
-                :tapped="{scale: 0.9}"
+                :hovered="{ scale: 1.5 }"
                 :delay="200"
             )
                 img(src='@/assets/svg/linkedin.svg' alt='linkedin logo').icon

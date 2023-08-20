@@ -1,21 +1,13 @@
 <script setup lang='ts'>
-const  webpSrc = ref<string | null>(null)
-const isLoading = ref(false)
-const error = ref<Error | null>(null)
+import avatar from '@/assets/images/avatar.webp';
 
-import imagePngSrc from '@/assets/images/avatar.png';
-
-const imageSrc = await convertToWebp(imagePngSrc)
-if(imageSrc) {
-  webpSrc.value = imageSrc
-}
 </script>
 
 <template lang="pug">
 .home__layout__wrapper
   .home__layout__wrapper__content
     .image__wrapper
-      img(:src="webpSrc")
+      img(:src="avatar")
     .content__intro__wrapper
       AnimateText
         h1(
@@ -40,7 +32,7 @@ if(imageSrc) {
       @apply -translate-y-[35vh];
 
       img {
-        @apply w-[90%] h-auto;
+        @apply w-full h-auto;
       }
 
     }
