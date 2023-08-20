@@ -1,34 +1,37 @@
 <script setup lang='ts'>
-// import image
+// Importing assets
 import avatarPath from '@/assets/images/avatar.webp';
-import circularText from '@/assets/svg/CircularText.svg'
+import circularText from '@/assets/svg/CircularText.svg';
 
-import  GLOBAL_CONFIG from '../../../global-config'
-const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
+// Importing configurations and directives
+import GLOBAL_CONFIG from '../../../global-config';
 import { MotionDirective as motion } from '@vueuse/motion';
-const vMotion = motion()
 
+// Destructuring configurations
+const { initial, enter, delay } = GLOBAL_CONFIG.motionHook;
 
-const avatar = ref<string | null>(null)
-const circularTxt = ref<string | null>(null)
+// Initializing directives
+const vMotion = motion();
 
-const loadImages = (src: string): Promise<void> => {
+// Utility method to preload images
+const preloadImage = (src: string): Promise<void> => {
     return new Promise<void>((resolve, reject): void => {
-        const img = new Image()
-        img.src = src
-        img.onload = () => {
-          resolve();
-        };
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
         img.onerror = reject;
-    })
+    });
 }
 
+// Use onMounted to preload the images
 onMounted(async () => {
-  await loadImages(avatarPath)
-  await loadImages(circularText)
-  avatar.value = avatarPath
-  circularTxt.value = circularText
-})
+  await preloadImage(avatarPath);
+  await preloadImage(circularText);
+});
+
+// Directly use the imported paths
+const avatar = ref(avatarPath);
+const circularTxt = ref(circularText);
 </script>
 
 <template lang="pug">
@@ -81,14 +84,14 @@ div
 
 <style lang="scss" scoped>
 .home__layout__wrapper {
-  @apply w-full h-screen inline-block z-0 bg-light lg:px-32 xl:px-40 overflow-hidden;
+  @apply w-full h-screen inline-block z-0 bg-light lg:px-32 xl:px-36 overflow-hidden;
 
   &__content {
     @apply relative flex items-center justify-center;
 
     .image__wrapper {
       @apply flex items-center justify-start w-1/2 h-full;
-      @apply xl:-translate-y-[30vh] 2xl:-translate-y-[35vh];
+      @apply lg:-translate-y-[20vh] xl:-translate-y-[20vh] 2xl:-translate-y-[35vh];
 
       img {
         @apply w-full h-auto;
@@ -97,14 +100,15 @@ div
 
     .content__intro__wrapper {
       @apply w-1/2 h-full flex flex-col items-center self-center;
-      @apply xl:-translate-y-[25vh] 2xl:-translate-y-[30vh];
+      @apply lg:-translate-y-[10vh]  xl:-translate-y-[15vh] 2xl:-translate-y-[30vh];
 
       h1 {
         @apply inline-block text-6xl text-dark font-bold capitalize;
+        @apply text-left text-6xl xl:text-5xl lg:text-5xl md:text-5xl sm:text-3xl;
       }
 
       p {
-        @apply text-base my-4 font-medium;
+        @apply text-base my-4 font-medium md:text-sm sm:text-xs;
       }
 
       .btn__wrapper {

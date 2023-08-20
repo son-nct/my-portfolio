@@ -46,7 +46,7 @@ div
 
 <style lang="scss" scoped>
 .header__wrapper {
-    @apply px-32 py-8 font-medium w-full flex items-center justify-between;
+    @apply px-32 py-8 font-medium w-full flex items-center justify-between lg:px-16 relative md:px-12 sm:px-8;
     @apply flex items-center;
 
     &__logo {
