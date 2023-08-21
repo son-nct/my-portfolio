@@ -42,21 +42,10 @@ div
       .image__wrapper
         img(:src="avatar" width="600" height="600" alt='avatar')
       .content__intro__wrapper
-          h1(
-            v-motion
-            :initial="initial"
-            :enter="enter"
-            :delay="delay"
-          ) 
-            | Turning Vision Into Reality With Code And Design.
-          p(
-            v-motion
-            :initial="initial"
-            :enter="enter"
-            :delay="delay"
-          ) 
-            |As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications.
-            | Explore my latest projects and articles, showcasing my expertise in Vue.JS and web development.
+          AnimateHeadingText(:text="'Turning Vision Into Reality With Code And Design.'")
+          AnimateParagraph(
+            :text="'As a skilled full-stack developer,I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in Vue.JS and web development.'"
+          )
           .btn__wrapper(
             v-motion
             :initial="initial"
@@ -105,15 +94,6 @@ div
     .content__intro__wrapper {
       @apply w-1/2 h-full flex flex-col items-center self-center;
       @apply lg:-translate-y-[10vh]  xl:-translate-y-[15vh] 2xl:-translate-y-[30vh];
-
-      h1 {
-        @apply inline-block text-6xl text-dark font-bold capitalize;
-        @apply text-left text-6xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
-      }
-
-      p {
-        @apply lg:text-base my-4 font-medium md:text-sm sm:text-xs;
-      }
 
       .btn__wrapper {
         @apply flex items-center self-start mt-2;

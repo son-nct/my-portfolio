@@ -2,7 +2,7 @@
 import { useHead } from '@vueuse/head'
 
 const siteData = reactive({
-      title: `Home`,
+      title: `Thai Son | Home Page`,
       description: `Explore my personal portfolio, intricately crafted with Vue.js, showcasing my passion for innovative design and cutting-edge web development.`,
 })
 

@@ -7,6 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AnimateHeadingText: typeof import('./src/components/atoms/AnimateHeadingText.vue')['default']
+    AnimateParagraph: typeof import('./src/components/atoms/AnimateParagraph.vue')['default']
     AppFooter: typeof import('./src/components/molecules/AppFooter.vue')['default']
     AppNavbar: typeof import('./src/components/molecules/AppNavbar.vue')['default']
     HomeLayout: typeof import('./src/components/templates/HomeLayout.vue')['default']
