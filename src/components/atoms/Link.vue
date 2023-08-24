@@ -22,7 +22,7 @@ router-link(:to="to").link {{ title }}
         @apply h-[1px] inline-block w-0 bg-dark absolute -bottom-0.5 left-0;
     }
 
-    &:hover {
+    &:not(.active):hover {
         .link__style {
             @apply w-full ease-out duration-300;
         }

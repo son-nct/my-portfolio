@@ -77,14 +77,14 @@ div
 
 <style lang="scss" scoped>
 .home__layout__wrapper {
-  @apply w-full h-screen inline-block z-0 bg-light lg:px-32 xl:px-36 overflow-hidden;
+  @apply w-full h-screen inline-block z-0 bg-light lg:pr-32 2xl:px-36 overflow-hidden;
 
   &__content {
     @apply relative flex items-center justify-center;
 
     .image__wrapper {
       @apply flex items-center justify-start w-1/2 h-full;
-      @apply lg:-translate-y-[20vh] xl:-translate-y-[20vh] 2xl:-translate-y-[35vh];
+      @apply md:-translate-y-[15vh] lg:-translate-y-[20vh] xl:-translate-y-[20vh] 2xl:-translate-y-[35vh];
 
       img {
         @apply w-full h-auto;
@@ -93,7 +93,7 @@ div
 
     .content__intro__wrapper {
       @apply w-1/2 h-full flex flex-col items-center self-center;
-      @apply lg:-translate-y-[10vh]  xl:-translate-y-[15vh] 2xl:-translate-y-[30vh];
+      @apply md:-translate-y-[5vh] lg:-translate-y-[10vh] xl:-translate-y-[15vh] 2xl:-translate-y-[30vh];
 
       .btn__wrapper {
         @apply flex items-center self-start mt-2;

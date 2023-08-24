@@ -9,9 +9,7 @@ Explore my latest projects and articles, showcasing my expertise in React.js and
 ABOUT PAGE:
 
 - Passion Fuels Purpose! 
-- Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
-and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
-new and innovative ways to bring my clients' visions to life.
+- Hello, I'm Thái Sơn, a web development and UI/UX design enthusiast who is dedicated to crafting elegant and user-focused online solutions. With a track record of 4 years in the industry, I continually seek fresh and inventive methods to realize my clients' aspirations.
 
 - I believe that design is about more than just making things look pretty – it's about solving problems and 
 creating intuitive, enjoyable experiences for users. 

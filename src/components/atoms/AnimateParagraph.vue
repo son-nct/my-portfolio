@@ -20,7 +20,7 @@ p.animate__paragraph(
 
 <style lang="scss" scoped>
 .animate__paragraph {
-    @apply lg:text-base my-4 font-medium md:text-sm sm:text-xs;
+    @apply md:text-base  xl:text-lg my-4 font-medium  sm:text-xs;
 }
 
 </style>

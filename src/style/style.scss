@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .active {
-  @apply border-b border-dark;
+  @apply border-b border-dark cursor-default;
 }
 
 @layer base {
