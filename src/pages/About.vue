@@ -1,9 +1,4 @@
 <script setup  lang='ts'>
-import  GLOBAL_CONFIG from '../../global-config'
-const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
-import { MotionDirective as motion } from '@vueuse/motion';
-const vMotion = motion()
-
 import { useHead } from '@vueuse/head'
 
 const siteData = reactive({
@@ -26,7 +21,10 @@ useHead({
 
 <template lang="pug">
 main.wrapper
-    AboutLayout
+    Suspense
+        template(#fallback)
+            Spinner
+        AboutLayout
 </template>
 
 
