@@ -1,17 +1,17 @@
-<script setup  lang='ts'>
-import GLOBAL_CONFIG from '../../../global-config.ts'
-const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
-import { MotionDirective as motion } from '@vueuse/motion'
-const vMotion = motion()
+<script setup lang="ts">
+   import GLOBAL_CONFIG from '../../../global-config.ts'
+   const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
+   import { MotionDirective as motion } from '@vueuse/motion'
+   const vMotion = motion()
 
-import avatarPath from '@/assets/images/avatar2.webp';
+   import avatarPath from '@/assets/images/avatar2.webp'
 
-const avatar = ref<string | null>(null)
+   const avatar = ref<string | null>(null)
 
-onMounted(async () => {
-   await loadImage(avatarPath)
-   avatar.value = avatarPath
-})
+   onMounted(async () => {
+      await loadImage(avatarPath)
+      avatar.value = avatarPath
+   })
 </script>
 
 <template lang="pug">
@@ -39,52 +39,50 @@ main.wrapper
 
 </template>
 
-
 <style lang="scss" scoped>
-.wrapper {
-   @apply flex flex-col w-full items-center justify-center;
-
-   .font--bold {
-      @apply font-bold;
-   }
-
-   &__layout {
+   .wrapper {
       @apply flex flex-col w-full items-center justify-center;
 
-      @apply lg:px-16 relative md:px-12 sm:px-8 pt-16;
-
-      &__heading {
-         @apply mb-16 text-8xl;
+      .font--bold {
+         @apply font-bold;
       }
 
-      &__grid {
-         @apply grid grid-cols-8 w-full gap-16;
+      &__layout {
+         @apply flex flex-col w-full items-center justify-center;
 
-         &__introduction {
-            @apply col-span-3 flex flex-col items-start justify-start pt-14;
+         @apply lg:px-16 relative md:px-12 sm:px-8 pt-16;
 
-            h2 {
-               @apply mb-4 text-lg font-bold uppercase text-dark/75;
+         &__heading {
+            @apply mb-16 text-8xl;
+         }
+
+         &__grid {
+            @apply grid grid-cols-8 w-full gap-16;
+
+            &__introduction {
+               @apply col-span-3 flex flex-col items-start justify-start pt-14;
+
+               h2 {
+                  @apply mb-4 text-lg font-bold uppercase text-dark/75;
+               }
+
+               p {
+                  @apply font-medium text-base;
+
+                  &:not(:last-child) {
+                     @apply my-4;
+                  }
+               }
             }
 
-            p {
-               @apply font-medium text-base;
+            &__image {
+               @apply relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 scale-90;
 
-               &:not(:last-child) {
-                  @apply my-4;
+               img {
+                  @apply w-full h-auto rounded-2xl;
                }
             }
          }
-
-         &__image {
-            @apply relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 scale-90;
-
-            img {
-                  @apply w-full h-auto rounded-2xl;
-            }
-          
-         }
       }
    }
-}
 </style>
