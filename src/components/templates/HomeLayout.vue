@@ -14,21 +14,9 @@ const avatar = ref<string | null>(null)
 const circularTxt = ref<string | null>(null)
 const lightbulb = ref<string | null>(null)
 
-const loadImages = (src: string): Promise<void> => {
-    return new Promise<void>((resolve, reject): void => {
-        const img = new Image()
-        img.src = src
-        img.onload = () => {
-          resolve();
-        };
-        img.onerror = reject;
-    })
-}
 
 onMounted(async () => {
-  await loadImages(avatarPath)
-  await loadImages(circularTxtPath)
-  await loadImages(lightBulbPath)
+  await Promise.all([loadImage(avatarPath), loadImage(circularTxtPath), loadImage(lightBulbPath)])
   avatar.value = avatarPath
   circularTxt.value = circularTxtPath
   lightbulb.value = lightBulbPath

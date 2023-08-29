@@ -3,6 +3,19 @@ import { MotionDirective as motion } from '@vueuse/motion'
 import  GLOBAL_CONFIG from '../../../global-config'
 const vMotion = motion()
 const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
+
+import githubLogoPath from '@/assets/svg/logo-github.svg'
+import linkedInLogoPath from '@/assets/svg/linkedin.svg'
+
+const githubIcon = ref<string | null>(null)
+const linkedInIcon = ref<string | null>(null)
+
+onMounted(async () => {
+   await Promise.all([loadImage(githubLogoPath), loadImage(linkedInLogoPath)])
+   githubIcon.value = githubLogoPath
+   linkedInIcon.value = linkedInLogoPath
+})
+
 </script>
 
 <template lang="pug">
@@ -29,8 +42,9 @@ div
                 :enter="{ ...enter , scale: 1 }"
                 :hovered="{ scale: 1.5 }"
                 :delay="delay"
+                v-if="githubIcon"
             )
-                img(src='@/assets/svg/logo-github.svg' alt='github logo' width="32" height="32").icon
+                img(:src='githubIcon' alt='github logo' width="32" height="32").icon
             a(
                 href="https://facebook.com"
                 target="_blank"
@@ -39,8 +53,9 @@ div
                 :enter="{ ...enter , scale: 1 }"
                 :hovered="{ scale: 1.5 }"
                 :delay="delay"
+                v-if="linkedInIcon"
             )
-                img(src='@/assets/svg/linkedin.svg' alt='linkedin logo' width="32" height="32").icon
+                img(:src='linkedInIcon' alt='linkedin logo' width="32" height="32").icon
 </template>
 
 
