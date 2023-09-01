@@ -16,8 +16,8 @@ Link refer: https://github.com/vueuse/motion/issues/118
 Link refer: https://stackoverflow.com/questions/50011443/tslint-how-to-disable-error-somevariable-is-declared-but-its-value-is-never-rea
 
 ### The library I have used in my project 
-- vue-scrollto
 - @vueuse/motion
+- vue3-progressbar
 - ✨Magic ✨
 
 **Work hard, play hard!**

@@ -34,9 +34,9 @@ main.wrapper
                     | Company as a Front-End Developer. Alongside my professional responsibilities,
                     | I've meticulously developed a dedicated portfolio aimed at disseminating my extensive knowledge and technical insights within the realm of front-end development.
                     | My ultimate objective is to broaden the reach of this expertise, providing valuable insights and experiences to all those intrigued by this field.
-            .wrapper__layout__grid__image(v-if="avatar")
-               img(:src="avatar" alt="avatar" width="650" height="650")
-
+            .wrapper__layout__grid__image
+               img(:src="avatar" alt="avatar" width="250" height="250" v-if="avatar")
+               Spinner(v-else)
 </template>
 
 <style lang="scss" scoped>
@@ -76,7 +76,7 @@ main.wrapper
             }
 
             &__image {
-               @apply relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 scale-90;
+               @apply relative flex items-center justify-center col-span-3 h-max min-h-[600px] rounded-2xl border-2 border-solid border-dark  bg-light p-8 scale-90;
 
                img {
                   @apply w-full h-auto rounded-2xl;
