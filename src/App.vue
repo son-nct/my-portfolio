@@ -1,6 +1,6 @@
 <script setup lang="ts">
    const internalInstance = getCurrentInstance()
-   const $progress = internalInstance.appContext.config.globalProperties.$Progress
+   const $progress = internalInstance?.appContext.config.globalProperties.$Progress
 
    const route = useRoute()
    const router = useRouter()
@@ -8,7 +8,7 @@
    onBeforeMount(() => {
       $progress.start()
 
-      router.beforeEach((to, from, next) => {
+      router.beforeEach((to, _, next) => {
          if (to.meta.progress !== undefined) {
             let meta = to.meta.progress
             $progress.parseMeta(meta)
