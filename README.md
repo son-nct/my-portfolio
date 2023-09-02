@@ -15,6 +15,11 @@ Link refer: https://github.com/vueuse/motion/issues/118
 2. tslint how to disable error "someVariable is declared but its value is never read"\
 Link refer: https://stackoverflow.com/questions/50011443/tslint-how-to-disable-error-somevariable-is-declared-but-its-value-is-never-rea
 
+3. Could not find a declaration file for the module '@aacassandra/vue3-progressbar'. How to fix it?
+    + Create a 'types' folder to store the files that will declare the modules we use.
+    + Create a file named 'progressbar.d.ts' to declare the module.
+    + Add the following code to declare the module: declare module '@aacassandra/vue3-progressbar';"
+
 ### The library I have used in my project 
 - @vueuse/motion
 - vue3-progressbar
