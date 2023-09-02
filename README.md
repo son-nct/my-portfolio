@@ -23,6 +23,7 @@ Link refer: https://stackoverflow.com/questions/50011443/tslint-how-to-disable-e
 ### The library I have used in my project 
 - @vueuse/motion
 - vue3-progressbar
+- vue3-autocounter
 - ✨Magic ✨
 
 **Work hard, play hard!**

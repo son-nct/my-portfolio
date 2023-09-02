@@ -31,6 +31,12 @@ module.exports = {
          },
          animation: {
             'spin-slow': 'spin 8s linear infinite'
+         },
+         zIndex: {
+            'negative': '-1'
+         },
+         boxShadow: {
+            'custom': '8px 8px 0 5px rgba(0, 0, 0, 1)',
          }
       },
    },

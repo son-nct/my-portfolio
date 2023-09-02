@@ -1,5 +1,6 @@
 <script setup lang="ts">
    import GLOBAL_CONFIG from '../../../global-config.ts'
+   // import Vue3autocounter from 'vue3-autocounter'
    const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
    import { MotionDirective as motion } from '@vueuse/motion'
    const vMotion = motion()
@@ -37,6 +38,16 @@ main.wrapper
             .wrapper__layout__grid__image
                img(:src="avatar" alt="avatar" width="250" height="250" v-if="avatar")
                Spinner(v-else)
+            .wrapper__layout__grid__number
+               div.wrapper__layout__grid__number__section
+                  AnimateCounterText(:startAmount="0" :endAmount="10" :suffix="'+'")
+                  h2 years of experience
+               div.wrapper__layout__grid__number__section
+                  AnimateCounterText(:startAmount="0" :endAmount="10" :suffix="'+'")
+                  h2 projects completed
+               div.wrapper__layout__grid__number__section
+                  AnimateCounterText(:startAmount="0" :endAmount="10" :suffix="'+'")
+                  h2 blog post written
 </template>
 
 <style lang="scss" scoped>
@@ -50,7 +61,7 @@ main.wrapper
       &__layout {
          @apply flex flex-col w-full items-center justify-center;
 
-         @apply lg:px-16 relative md:px-12 sm:px-8 pt-16;
+         @apply lg:px-16 md:px-12 sm:px-8 pt-16;
 
          &__heading {
             @apply mb-16 text-8xl;
@@ -76,10 +87,26 @@ main.wrapper
             }
 
             &__image {
-               @apply relative flex items-center justify-center col-span-3 h-max min-h-[600px] rounded-2xl border-2 border-solid border-dark  bg-light p-8 scale-90;
-
+               @apply relative flex translate-x-9 items-center justify-center col-span-3 h-max min-h-[600px] rounded-2xl border-2 border-solid border-dark bg-light p-8 scale-90;
+               @apply shadow-custom;
                img {
                   @apply w-full h-auto rounded-2xl;
+               }
+            }
+
+            &__number {
+               @apply col-span-2 flex flex-col items-center justify-between pt-14;
+
+               &__section {
+                  @apply flex flex-col items-end justify-center;
+
+                  span {
+                     @apply inline-block text-7xl font-bold;
+                  }
+
+                  h2 {
+                     @apply text-dark/75 text-xl capitalize font-medium;
+                  }
                }
             }
          }
