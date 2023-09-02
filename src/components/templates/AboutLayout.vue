@@ -1,10 +1,9 @@
-<script setup lang="ts">
-  
-</script>
+<script setup lang="ts"></script>
 
 <template lang="pug">
 main.wrapper
    AboutBiography
+   AboutSkills
 </template>
 
 <style lang="scss" scoped>

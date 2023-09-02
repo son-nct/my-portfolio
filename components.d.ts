@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AboutBiography: typeof import('./src/components/organisms/about/AboutBiography.vue')['default']
     AboutLayout: typeof import('./src/components/templates/AboutLayout.vue')['default']
+    AboutSkills: typeof import('./src/components/organisms/about/AboutSkills.vue')['default']
     AnimateCounterText: typeof import('./src/components/atoms/AnimateCounterText.vue')['default']
     AnimateHeadingText: typeof import('./src/components/atoms/AnimateHeadingText.vue')['default']
     AnimateParagraph: typeof import('./src/components/atoms/AnimateParagraph.vue')['default']

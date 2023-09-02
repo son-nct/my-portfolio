@@ -14,7 +14,7 @@
 
 <template lang="pug">
 .wrapper__layout
-    AnimateHeadingText(:text="'Passion Fuels Purpose! '").wrapper__layout__heading
+    AnimateHeadingText(:text="'Purpose is Ignited by Passion! '").wrapper__layout__heading
     .wrapper__layout__grid
         .wrapper__layout__grid__introduction
             h2 Biography
@@ -48,19 +48,21 @@
 
 <style lang="scss" scoped>
    .wrapper__layout {
-      @apply flex flex-col w-full items-center justify-center;
-
-      @apply lg:px-16 md:px-12 sm:px-8 pt-16;
+      @apply flex flex-col w-full items-center justify-center lg:px-16 md:px-12 sm:px-8 pt-16;
 
       &__heading {
-         @apply mb-16 text-8xl;
+         @apply mb-20 text-8xl;
       }
 
       &__grid {
          @apply grid grid-cols-8 w-full gap-16;
 
          &__introduction {
-            @apply col-span-3 flex flex-col items-start justify-start pt-14;
+            @apply col-span-3 flex flex-col items-start justify-start pt-12;
+
+            .font--bold {
+               @apply font-bold;
+            }
 
             h2 {
                @apply mb-4 text-lg font-bold uppercase text-dark/75;
@@ -85,7 +87,7 @@
          }
 
          &__number {
-            @apply col-span-2 flex flex-col items-center justify-between pt-14;
+            @apply col-span-2 flex flex-col items-center justify-between pt-10;
 
             &__section {
                @apply flex flex-col items-end justify-center;
