@@ -7,6 +7,11 @@ export default {
       enter: {
          y: 0,
          opacity: 1,
+         transition: {
+            type: 'spring',
+            stiffness: '100',
+            delay: 200,
+         },
       },
       delay: 200,
    },
