@@ -1,17 +1,11 @@
 <script setup lang="ts">
    import { MotionDirective as motion } from '@vueuse/motion'
    import CONFIG from '../../../global-config'
-
-   const { initial, delay, enter } = CONFIG.motionHook
+   const { delay, enter } = CONFIG.motionHook
    const vMotion = motion()
-   export interface Props {
-      text: string
-      positionX?: number
-      positionY?: number
-      unit?: string
-   }
+   import type { Skill } from '@/types/skill'
 
-   const props = withDefaults(defineProps<Props>(), {
+   const props = withDefaults(defineProps<Skill>(), {
       text: '',
       positionX: 0,
       positionY: 0,
@@ -33,10 +27,11 @@
 <template lang="pug">
 .skills__wrapper__content__skill(
     v-motion
-    :initial="{ opacity: 0, y: 0 }"
+    :initial="{scale: 1, y: 0 }"
     :enter="{ scale: 1 }"
-    :visible="{...enter, opacity: 1, x: finalPositionX, y: finalPositionY }"
-    :delay="500"
+    :visible="{...enter, x: finalPositionX, y: finalPositionY }"
+    :delay="delay"
+    :leave="{opacity: 0, scale: 0, y: 0}"
 )
    | {{ text }}
 </template>

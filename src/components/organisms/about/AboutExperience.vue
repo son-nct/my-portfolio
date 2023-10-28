@@ -79,7 +79,7 @@
    }
 
    .experience__line__wrapper {
-      @apply max-h-full absolute left-8 top-0 w-[4px] bg-dark origin-top duration-300 ease-linear;
+      @apply max-h-full absolute left-9 top-4 w-[4px] bg-dark origin-top duration-300 ease-linear;
    }
 
    .experience__list__wrapper {

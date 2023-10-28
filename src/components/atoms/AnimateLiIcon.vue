@@ -1,39 +1,10 @@
-<script setup lang="ts">
-import { MotionDirective as motion } from '@vueuse/motion'
-import CONFIG from '../../../global-config'
-
-const { initial, delay, enter } = CONFIG.motionHook
-const vMotion = motion()
-export interface Props {
-   text: string
-   positionX?: number
-   positionY?: number
-   unit?: string
-}
-
-const props = withDefaults(defineProps<Props>(), {
-   text: '',
-   positionX: 0,
-   positionY: 0,
-   unit: 'vw',
-})
-
-// 1vw = 14.4
-const convertToPx = 14.4
-</script>
-
 <template lang="pug">
-.skills__wrapper__content__skill(
-   v-motion
-   :initial="{ opacity: 0}"
-   :visible="{...enter, opacity: 1, x: `${unit === 'vw' ? positionX * convertToPx : positionX}`, y: `${unit === 'vw' ? positionY * convertToPx : positionY}`}"
-   :hovered="{ scale: 1.05}"
-)
-   | {{ text }}
-</template>
+figure(class='absolute left-0 stroke-dark')
+  svg(width="75" height="75" viewBox="0 0 75 75" class='-rotate-90')
+    circle(cx='37.5' cy='37.5' r='20' class="stroke-primary fill-none")
+    circle(cx='37.5' cy='37.5' r='20' class="fill-light stroke-[5px]")
+    circle(cx='37.5' cy='37.5' r='10' class="stroke-1 animate-pulse ani fill-primary")
 
-<style lang="scss">
-.skills__wrapper__content__skill {
-   @apply absolute flex items-center justify-center rounded-full bg-dark py-2 px-6 text-light font-semibold shadow-dark cursor-pointer;
-}
-</style>
+      
+
+</template>

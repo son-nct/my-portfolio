@@ -14,11 +14,12 @@
 
 <template lang="pug">
 li.experience__detail__item
+   AnimateLiIcon
    div(
       v-motion
       :initial="{ opacity: 0, y: 100}"
       :visible="{...enter, opacity: 1}"
-      :delay="delay"
+      :delay="500"
    )
       h3.position__company.text-2xl
          | {{ position }}&nbsp;
@@ -34,7 +35,7 @@ li.experience__detail__item
       @apply my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between;
 
       .position__company {
-         @apply capitalize font-bold text-dark sm:text-xl md:text-2xl #{!important};
+         @apply capitalize font-bold pt-3 text-dark sm:text-xl md:text-2xl #{!important};
 
          .company {
             @apply text-primary capitalize;
