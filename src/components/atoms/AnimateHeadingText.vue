@@ -1,27 +1,27 @@
-<script setup lang='ts'>
-import  GLOBAL_CONFIG from '../../../global-config'
-const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
-import { MotionDirective as motion } from '@vueuse/motion';
-const vMotion = motion()
+<script setup lang="ts">
+   import GLOBAL_CONFIG from '../../../global-config'
+   const { initial, enter, delay } = GLOBAL_CONFIG.motionHook
+   import { MotionDirective as motion } from '@vueuse/motion'
+   const vMotion = motion()
 
-const props = defineProps<{
-    text: string
-}>()
+   const props = defineProps<{
+      text: string
+   }>()
 </script>
 
-<template lang='pug'>
+<template lang="pug">
 h1.animate__heading(
-    v-motion
-    :initial="initial"
-    :enter="enter"
-    :delay="delay"
+   v-motion
+   :initial="initial"
+   :enter="enter"
+   :delay="delay"
 ) {{ text }}
 </template>
 
 <style lang="scss" scoped>
-.animate__heading {
-    @apply inline-block text-dark font-bold capitalize;
-    @apply text-left text-6xl 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
-}
-
+   .animate__heading {
+      @apply inline-block text-dark font-bold capitalize;
+      @apply text-center text-8xl;
+      // @apply text-left text-6xl 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
+   }
 </style>

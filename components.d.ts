@@ -8,11 +8,14 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AboutBiography: typeof import('./src/components/organisms/about/AboutBiography.vue')['default']
+    AboutExperience: typeof import('./src/components/organisms/about/AboutExperience.vue')['default']
     AboutLayout: typeof import('./src/components/templates/AboutLayout.vue')['default']
     AboutSkills: typeof import('./src/components/organisms/about/AboutSkills.vue')['default']
     AnimateButtonSkill: typeof import('./src/components/atoms/AnimateButtonSkill.vue')['default']
     AnimateCounterText: typeof import('./src/components/atoms/AnimateCounterText.vue')['default']
     AnimateHeadingText: typeof import('./src/components/atoms/AnimateHeadingText.vue')['default']
+    AnimateLiIcon: typeof import('./src/components/atoms/AnimateLiIcon.vue')['default']
+    AnimateListExperienceItem: typeof import('./src/components/atoms/AnimateListExperienceItem.vue')['default']
     AnimateParagraph: typeof import('./src/components/atoms/AnimateParagraph.vue')['default']
     AppFooter: typeof import('./src/components/molecules/AppFooter.vue')['default']
     AppNavbar: typeof import('./src/components/molecules/AppNavbar.vue')['default']

@@ -20,16 +20,25 @@
 
    // 1vw = 14.4
    const convertToPx = 14.4
+
+   const finalPositionX = computed(() => {
+      return props.positionX * convertToPx
+   })
+
+   const finalPositionY = computed(() => {
+      return props.positionY * convertToPx
+   })
 </script>
 
 <template lang="pug">
 .skills__wrapper__content__skill(
     v-motion
-    :initial="{ opacity: 0}"
-    :visible="{...enter, opacity: 1, x: `${unit === 'vw' ? positionX * convertToPx : positionX}`, y: `${unit === 'vw' ? positionY * convertToPx : positionY}`}"
-    :hovered="{ scale: 1.05}"
+    :initial="{ opacity: 0, y: 0 }"
+    :enter="{ scale: 1 }"
+    :visible="{...enter, opacity: 1, x: finalPositionX, y: finalPositionY }"
+    :delay="500"
 )
-    | {{ text }}
+   | {{ text }}
 </template>
 
 <style lang="scss">
