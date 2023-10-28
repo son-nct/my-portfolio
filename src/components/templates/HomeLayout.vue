@@ -72,16 +72,20 @@ div
 
     .image__wrapper {
       @apply flex items-center justify-start w-1/2 h-full;
-      @apply md:-translate-y-[15vh] lg:-translate-y-[20vh] xl:-translate-y-[20vh] 2xl:-translate-y-[35vh];
+      @apply md:-translate-y-[15vh] lg:-translate-y-[20vh] xl:-translate-y-[calc(100vh-60vh)] 2xl:-translate-y-[calc(100vh-65vh)];
 
       img {
-        @apply w-full h-auto;
+        @apply w-full h-auto scale-90;
       }
     }
 
     .content__intro__wrapper {
-      @apply w-1/2 h-full flex flex-col items-center self-center;
-      @apply md:-translate-y-[5vh] lg:-translate-y-[10vh] xl:-translate-y-[15vh] 2xl:-translate-y-[30vh];
+      @apply lg:w-[55%] xl:w-1/2 h-full flex flex-col items-center self-center;
+      @apply md:-translate-y-[5vh] lg:-translate-y-[10vh] xl:-translate-y-[calc(100vh-70vh)] 2xl:-translate-y-[calc(100vh-70vh)];
+
+      h1 {
+        @apply text-left text-6xl 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
+      }
 
       .btn__wrapper {
         @apply flex items-center self-start mt-2;
@@ -124,6 +128,6 @@ div
 
 
 .light__bulb__wrapper {
-  @apply absolute right-8 bottom-8 inline-block w-24;
+  @apply absolute right-14 -bottom-20  inline-block w-24;
 }
 </style>

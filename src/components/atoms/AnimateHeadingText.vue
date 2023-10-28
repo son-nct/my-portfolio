@@ -20,8 +20,8 @@ h1.animate__heading(
 
 <style lang="scss" scoped>
 .animate__heading {
-    @apply inline-block text-6xl text-dark font-bold capitalize;
-    @apply text-left text-6xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
+    @apply inline-block text-dark font-bold capitalize;
+    @apply text-left text-6xl 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
 }
 
 </style>

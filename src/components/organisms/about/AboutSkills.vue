@@ -1,17 +1,17 @@
 <script setup lang="ts">
  const skills = ref([
       { text: 'Web' },
-      { text: 'CSS', positionX: -5, positionY: -8, unit: 'vw' },
-      { text: 'SCSS', positionX: -5, positionY: 8, unit: 'vw' },
-      { text: 'HTML', positionX: -20, positionY: 2, unit: 'vw' },
-      { text: 'Javascript', positionX: -25, positionY: -6, unit: 'vw' },
-      { text: 'VueJS', positionX: 0, positionY: 13, unit: 'vw' },
-      { text: 'NuxtJS', positionX: -15, positionY: 15, unit: 'vw' },
-      { text: 'Java', positionX: 10, positionY: -12, unit: 'vw' },
-      { text: 'NodeJS', positionX: 0, positionY: -18, unit: 'vw' },
-      { text: 'Bootstrap', positionX: 32, positionY: -5, unit: 'vw' },
-      { text: 'Tailwind CSS', positionX: 28, positionY: -20, unit: 'vw' },
-      { text: 'Figma', positionX: 20, positionY: 18, unit: 'vw' },
+      { text: 'CSS', positionX: -13, positionY: 0 },
+      { text: 'SCSS', positionX: 13, positionY: 0 },
+      { text: 'HTML', positionX: 0, positionY: -7 },
+      { text: 'Javascript', positionX: 0, positionY: 7 },
+      { text: 'VueJS', positionX: 10, positionY: 13 },
+      { text: 'NuxtJS', positionX: -10, positionY: 13 },
+      { text: 'Java', positionX: 10, positionY: -17 },
+      { text: 'NodeJS', positionX: -10, positionY: -17 },
+      { text: 'Bootstrap', positionX: 18, positionY: -6 },
+      { text: 'Tailwind CSS', positionX: -18, positionY: -6 },
+      { text: 'Figma', positionX: 0, positionY: -14 },
 ]);
 </script>
 
@@ -34,7 +34,8 @@
       @apply container max-w-screen-2xl;
 
       &__title {
-         @apply font-bold text-8xl mt-60 w-full text-center;
+         @apply text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-3xl;
+         @apply font-bold mt-40 w-full text-center;
       }
 
       &__content {

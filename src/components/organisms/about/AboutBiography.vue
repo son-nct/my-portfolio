@@ -51,7 +51,7 @@
       @apply flex flex-col w-full items-center justify-center lg:px-16 md:px-12 sm:px-8 pt-16;
 
       &__heading {
-         @apply mb-20 text-8xl;
+         @apply mb-20;
       }
 
       &__grid {

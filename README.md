@@ -24,6 +24,7 @@ Link refer: https://stackoverflow.com/questions/50011443/tslint-how-to-disable-e
 - @vueuse/motion
 - vue3-progressbar
 - vue3-autocounter
+- vite-plugin-compression
 - ✨Magic ✨
 
 **Work hard, play hard!**

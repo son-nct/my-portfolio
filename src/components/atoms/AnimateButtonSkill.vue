@@ -15,7 +15,7 @@
       text: '',
       positionX: 0,
       positionY: 0,
-      unit: 'px',
+      unit: 'vw',
    })
 
    // 1vw = 14.4
@@ -34,6 +34,6 @@
 
 <style lang="scss">
    .skills__wrapper__content__skill {
-      @apply absolute flex items-center justify-center rounded-full bg-dark py-3 px-6 text-light font-semibold shadow-dark cursor-pointer;
+      @apply absolute flex items-center justify-center rounded-full bg-dark py-2 px-6 text-light font-semibold shadow-dark cursor-pointer;
    }
 </style>
