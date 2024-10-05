@@ -1,0 +1,60 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog"
+  },
+  "home": {
+    "title": "Turning Vision Into Reality With Code And Design.",
+    "description": "As a skilled front-end developer,I am dedicated to turning ideas into innovative web applications. Explore my latest projects and articles, showcasing my expertise in Vue.JS and web development.",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "about": {
+    "seo": {
+      "title": "Thai Son {'|'} About Page"
+    },
+    "title": "Work Hard Play Hard !",
+    "description1": "Hi, I'm Thai Son, a web developer and UI/UX designer with a passion for creating functional, user-friendly digital experiences. With 3 years of experience, including 2.5 years specializing in Vue.js and Nuxt.js, I focus on turning my clients' ideas into effective, visually appealing solutions.",
+    "description2": "For me, design is more than just how things look—it's about solving real-world problems and creating smooth, enjoyable experiences for users. I combine creativity with a deep understanding of user needs to build digital products that not only look great but work seamlessly.",
+    "description3": "Whether it's a website, mobile app, or any other digital product, I bring a commitment to high-quality design and user-centered thinking to every project. I'm excited to bring my skills and passion to your next project.",
+    "biography": "Biography",
+    "yoe": "Years Of Experiences",
+    "project-completed": "Projects Completed",
+    "blog-written": "Blog Written",
+    "skill": {
+      "web": "Web",
+      "html": "HTML",
+      "css": "CSS",
+      "js": "Javascript",
+      "vue": "VueJS",
+      "nuxt": "NuxtJS",
+      "docker": "Docker",
+      "github-action": "Github Action",
+      "aws": "AWS",
+      "strapi": "Strapi",
+      "graphql": "GraphQL",
+      "jest": "Jest",
+      "vitest": "Vitest",
+      "ci-cd": "CI/CD"
+    },
+    "experience": {
+      "title": "Experience",
+      "front-end": "Front-end Developer",
+      "back-end": "Back-end Developer",
+      "full-stack": "Fullstack Developer",
+      "dayone-description": "Worked on a team responsible for elevating user interfaces with Nuxt.js, strategically leveraging SSR to enhance SEO optimization, and innovating through the development of a headless CMS for dynamic content management.",
+      "burningbros-description": "Worked as part of a team to elevate user interfaces using Nuxt.js, with a focus on building a clean and scalable codebase. Took the lead in optimizing application performance by implementing techniques such as code splitting, lazy loading, and caching. Contributed to refining user experience and ensuring smooth, responsive interfaces.",
+      "fpt-description2": "Worked on a team responsible for enhancing user interfaces with Vue.js, pioneered RESTful APIs via Java Spring Boot, optimized database systems, and actively engaged in Agile methodologies to streamline project accomplishments.",
+      "fpt-description1": "Worked on a team responsible for enhancing web projects using PHP, focusing on dynamic user experiences. I crafted and executed SQL queries for deep data analysis. Within an agile team, I contributed to key milestones through collaborative meetings and strategic input."
+    }
+  },
+  "footer": {
+    "name": "Thai Son",
+    "build-with": "Build With",
+    "say-hello": "Say hello",
+    "all-right-reserved": "All Rights Reserved",
+    "hire-me": "Hire me"
+  }
+}
