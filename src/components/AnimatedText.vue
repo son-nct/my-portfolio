@@ -5,6 +5,8 @@
       :class="$attrs.class"
     >
       <span
+        v-for="(word, index) in text.split(' ')"
+        :key="word + '-' + index"
         v-motion="{
           initial: {
             opacity: 1
@@ -16,8 +18,6 @@
             }
           }
         }"
-        v-for="(word, index) in text.split(' ')"
-        :key="word + '-' + index"
       >
         <span
           v-motion="{

@@ -1,6 +1,24 @@
 <template>
   <div class="w-full my-64 min-h-fit">
-    <h2 class="w-full mb-32 font-bold text-center text-8xl">
+    <h2
+      v-motion="{
+        initial: {
+          opacity: 0,
+          y: 50
+        },
+        visibleOnce: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: 'spring',
+            stiffness: 250,
+            damping: 50,
+            mass: 1
+          }
+        }
+      }"
+      class="w-full mb-32 font-bold text-center text-8xl"
+    >
       {{ t('about.experience.title') }}
     </h2>
     <div
@@ -28,6 +46,7 @@
       <ul class="flex flex-col items-start justify-between w-full ml-4">
         <Details
           v-for="detail in details"
+          :key="detail.time"
           class="detail"
           :company="detail.company"
           :position="detail.position"
@@ -48,24 +67,31 @@
   onMounted(() => {
     useGsap.registerPlugin($ScrollTrigger)
 
-    const experiences = document.querySelectorAll('.circle')
-    const ulElement = document.querySelector('ul')
-    const line = document.querySelector('#line')
+    const experiences = document.querySelectorAll<HTMLElement>('.circle')
+    const ulElement = document.querySelector<HTMLElement>('ul')
+    const line = document.querySelector<SVGElement>('#line')
+
+    if (!ulElement || !line) return
 
     useGsap.to(line, {
       scrollTrigger: {
-        trigger: experiences[0], // Start at the first circle
+        trigger: experiences[0],
         start: 'top center',
         endTrigger: experiences[experiences.length - 1],
         end: 'bottom center',
-        scrub: true // Follow the scroll
+        scrub: true,
+        invalidateOnRefresh: false
       },
-      height: () => ulElement?.offsetHeight as number,
+      height: () => ulElement.offsetHeight,
       ease: 'none'
     })
 
     experiences.forEach((experience, index) => {
-      const circle = experience.querySelector('circle:nth-child(2)')
+      const circle = experience.querySelector<SVGCircleElement>(
+        'circle:nth-child(2)'
+      )
+      if (!circle) return
+
       const circumference = 2 * Math.PI * 10
       const nextDasharray = circumference + (index + 1) * 100
 
@@ -76,7 +102,9 @@
           trigger: experience,
           start: 'top center',
           end: 'bottom center',
-          scrub: 4
+          scrub: 20,
+          once: true,
+          invalidateOnRefresh: true
         },
         ease: 'none'
       })

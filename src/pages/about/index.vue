@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import { useHead, useI18n } from '#imports'
-  const { t } = useI18n()
   import AnimatedText from '~/components/AnimatedText.vue'
   import AnimatedNumber from '~/components/AnimatedNumber.vue'
   import Layout from '~/components/Layout.vue'
   import Skills from '~/components/Skills.vue'
   import Experience from '~/components/Experience.vue'
+  import { useHead, useI18n } from '#imports'
+  const { t } = useI18n()
 
   useHead({
     title: t('about.seo.title')

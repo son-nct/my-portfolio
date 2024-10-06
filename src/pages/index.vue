@@ -93,7 +93,7 @@
   import AnimatedText from '~/components/AnimatedText.vue'
   import HireMe from '~/components/HireMe.vue'
   import { useHead, useI18n } from '#imports'
-  
+
   useHead({
     title: 'Thai Son | Front-end Developer'
   })

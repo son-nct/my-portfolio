@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
   import { useGsap } from '#gsap'
-  import { reactive, ref } from '#imports'
+  import { reactive } from '#imports'
 
   const props = defineProps<{
     value: number

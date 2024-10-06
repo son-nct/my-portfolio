@@ -36,7 +36,8 @@
     "nuxt-svgo": "^4.0.6",
     "pinia": "^2.2.4",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "@studio-freight/lenis": "^1.0.27"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

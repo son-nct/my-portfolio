@@ -5,7 +5,7 @@
         opacity: 0,
         y: 50
       },
-      visible: {
+      visibleOnce: {
         opacity: 1,
         y: 0,
         transition: {
