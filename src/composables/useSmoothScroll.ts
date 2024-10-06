@@ -3,7 +3,7 @@ import Lenis from '@studio-freight/lenis'
 
 export const useSmoothScroll = () => {
   const scrollLenis = new Lenis({
-    duration: 0.8,
+    duration: 1.2,
     orientation: 'vertical',
     gestureOrientation: 'vertical',
     smoothWheel: true,
