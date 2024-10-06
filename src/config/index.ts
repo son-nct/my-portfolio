@@ -30,13 +30,13 @@ export default defineNuxtConfig({
         publicAssets: [
             {
                 baseURL: "images",
-                dir: "public/images",
+                dir: "src/public/images",
                 maxAge: 60 * 60 * 24,
             },
         ],
     },
     tailwindcss: {
-        cssPath: ['~/src/assets/css/tailwind.scss', { injectPosition: "last" }],
+        cssPath: ['~/src/assets/css/tailwind.scss', { injectPosition: "first" }],
         viewer: false // To disable the viewer during development, set its value to false:
     },
     googleFonts: {
