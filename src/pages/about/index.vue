@@ -81,7 +81,7 @@
             <span class="inline-block font-bold text-7xl">
               <AnimatedNumber :value="3" />
             </span>
-            <h2 class="text-xl font-medium capitalize text-dark/75">
+            <h2 class="text-xl font-medium text-right capitalize text-dark/75">
               {{ t('about.yoe') }}
             </h2>
           </div>
@@ -90,7 +90,7 @@
             <span class="inline-block font-bold text-7xl">
               <AnimatedNumber :value="3" />
             </span>
-            <h2 class="text-xl font-medium capitalize text-dark/75">
+            <h2 class="text-xl font-medium text-right capitalize text-dark/75">
               {{ t('about.project-completed') }}
             </h2>
           </div>
@@ -99,7 +99,7 @@
             <span class="inline-block font-bold text-7xl">
               <AnimatedNumber :value="3" />
             </span>
-            <h2 class="text-xl font-medium capitalize text-dark/75">
+            <h2 class="text-xl font-medium text-right capitalize text-dark/75">
               {{ t('about.blog-written') }}
             </h2>
           </div>

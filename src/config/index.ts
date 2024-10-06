@@ -22,7 +22,18 @@ export default defineNuxtConfig({
         }
     },
     nitro: {
-        compressPublicAssets: true
+        compressPublicAssets: true,
+        routeRules: {
+            '/': { prerender: true, cache: { maxAge: 60 * 60, base: "redis" } },
+            '/about': { prerender: true, cache: { maxAge: 60 * 60, base: "redis" } },
+        },
+        publicAssets: [
+            {
+                baseURL: "images",
+                dir: "public/images",
+                maxAge: 60 * 60 * 24,
+            },
+        ],
     },
     tailwindcss: {
         cssPath: ['~/src/assets/css/tailwind.scss', { injectPosition: "last" }],
