@@ -80,7 +80,7 @@
         endTrigger: experiences[experiences.length - 1],
         end: 'bottom center',
         scrub: true,
-        invalidateOnRefresh: false
+        invalidateOnRefresh: true
       },
       height: () => ulElement.offsetHeight,
       ease: 'none'
