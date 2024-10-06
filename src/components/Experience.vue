@@ -41,7 +41,7 @@
     >
       <div
         id="line"
-        class="absolute top-0 w-[4px] h-0 origin-top bg-dark left-8 transition-[height] duration-300 ease-linear"
+        class="absolute top-0 w-[4px] h-0 origin-top bg-dark max-h-full left-8 transition-[height] duration-300 ease-linear"
       />
       <ul class="flex flex-col items-start justify-between w-full ml-4">
         <Details
