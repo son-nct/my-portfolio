@@ -26,14 +26,9 @@ export default defineNuxtConfig({
         routeRules: {
             '/': { prerender: true, cache: { maxAge: 60 * 60, base: "redis" } },
             '/about': { prerender: true, cache: { maxAge: 60 * 60, base: "redis" } },
+            '/src/public/images/**': { headers: { 'cache-control': 's-maxage=86400' } },// within 1 day
+            '/src/assets/**': { headers: { 'cache-control': 's-maxage=86400' } },// within 1 day
         },
-        publicAssets: [
-            {
-                baseURL: "images",
-                dir: "src/public/images",
-                maxAge: 60 * 60 * 24,
-            },
-        ],
     },
     tailwindcss: {
         cssPath: ['~/src/assets/css/tailwind.scss', { injectPosition: "first" }],
