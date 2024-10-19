@@ -21,7 +21,30 @@
       target="_blank"
       class="w-1/2 overflow-hidden rounded-lg cursor-pointer"
     >
-      <NuxtImg :src="img" :alt="title" class="w-full h-auto" format="webp" />
+      <NuxtImg
+        v-motion="{
+          initial: {
+            scale: 1
+          },
+          enter: {
+            scale: 1
+          },
+          hovered: {
+            scale: 1.05,
+            transition: {
+              duration: 300,
+              type: 'spring',
+              stiffness: 250,
+              damping: 50,
+              mass: 1
+            }
+          }
+        }"
+        :src="img"
+        :alt="title"
+        class="w-full h-auto"
+        format="webp"
+      />
     </NuxtLink>
     <div class="flex flex-col items-start justify-between w-1/2 pl-6">
       <span class="text-xl font-medium text-primary">{{ type }}</span>

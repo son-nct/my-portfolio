@@ -16,7 +16,7 @@
     <Layout class="pt-16">
       <AnimatedText class="mb-16" :text="t('projects.title')" />
 
-      <div class="grid grid-cols-12 gap-24">
+      <div class="grid grid-cols-12 gap-24 gap-y-32">
         <div class="col-span-12">
           <FeaturedProject
             :summary="t('projects.featured-project-description')"

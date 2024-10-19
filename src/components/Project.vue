@@ -15,13 +15,36 @@
 
 <template>
   <article
-    class="relative flex flex-col items-center justify-center w-full p-6 border border-solid rounded-2xl border-dark bg-light"
+    class="relative flex flex-col items-center justify-center w-full p-6 border border-solid shadow-custom rounded-2xl border-dark bg-light"
   >
     <NuxtLink
       target="_blank"
       class="w-full overflow-hidden rounded-lg cursor-pointer"
     >
-      <NuxtImg :src="img" :alt="title" class="w-full h-auto" format="webp" />
+      <NuxtImg
+        v-motion="{
+          initial: {
+            scale: 1
+          },
+          enter: {
+            scale: 1
+          },
+          hovered: {
+            scale: 1.05,
+            transition: {
+              duration: 300,
+              type: 'spring',
+              stiffness: 250,
+              damping: 50,
+              mass: 1
+            }
+          }
+        }"
+        :src="img"
+        :alt="title"
+        class="w-full h-auto"
+        format="webp"
+      />
     </NuxtLink>
     <div class="flex flex-col items-start justify-between w-full mt-4">
       <span class="text-xl font-medium text-primary">{{ type }}</span>
