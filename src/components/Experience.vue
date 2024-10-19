@@ -37,7 +37,7 @@
           }
         }
       }"
-      className="w-[75%] mx-auto relative"
+      class="w-[75%] mx-auto relative"
     >
       <div
         id="line"
@@ -65,48 +65,51 @@
   const { $ScrollTrigger } = useNuxtApp()
 
   onMounted(() => {
-    useGsap.registerPlugin($ScrollTrigger)
+    useGsap.registerPlugin($ScrollTrigger as object)
 
     const experiences = document.querySelectorAll<HTMLElement>('.circle')
     const ulElement = document.querySelector<HTMLElement>('ul')
-    const line = document.querySelector<SVGElement>('#line')
+    const line = document.querySelector<HTMLElement>('#line')
 
     if (!ulElement || !line) return
 
     useGsap.to(line, {
       scrollTrigger: {
-        trigger: experiences[0],
+        trigger: ulElement,
         start: 'top center',
-        endTrigger: experiences[experiences.length - 1],
         end: 'bottom center',
-        scrub: true,
+        scrub: 0.5,
         invalidateOnRefresh: true
       },
-      height: () => ulElement.offsetHeight,
+      height: '100%',
       ease: 'none'
     })
 
-    experiences.forEach((experience, index) => {
+    experiences.forEach((experience) => {
       const circle = experience.querySelector<SVGCircleElement>(
         'circle:nth-child(2)'
       )
       if (!circle) return
 
-      const circumference = 2 * Math.PI * 10
-      const nextDasharray = circumference + (index + 1) * 100
+      const radius = circle.r.baseVal.value
+      const circumference = 2 * Math.PI * radius
+
+      // Set initial state
+      useGsap.set(circle, {
+        strokeDasharray: circumference,
+        strokeDashoffset: circumference
+      })
 
       useGsap.to(circle, {
-        strokeDasharray: nextDasharray,
-        strokeDashoffset: circumference,
+        strokeDashoffset: 0,
         scrollTrigger: {
           trigger: experience,
           start: 'top center',
-          end: 'bottom center',
-          scrub: 20,
-          once: true,
+          end: 'center center',
+          scrub: 5,
           invalidateOnRefresh: true
         },
-        ease: 'none'
+        ease: 'power2.inOut'
       })
     })
   })
