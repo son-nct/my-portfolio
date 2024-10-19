@@ -1,12 +1,73 @@
 {
-    "navbar": {
-        "home": "Trang chủ",
-        "about": "Giới thiệu",
-        "projects": "Dự án",
-        "blog": "Blog"
+  "navbar": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "projects": "Dự án",
+    "blogs": "Blog"
+  },
+  "home": {
+    "title": "Hiện Thực Hóa Ước Mơ Qua Nghệ Thuật Lập Trình",
+    "description": "Là một nhà phát triển front-end có kỹ năng, tôi tận tâm biến ý tưởng thành các ứng dụng web sáng tạo. Khám phá các dự án và bài viết mới nhất của tôi, thể hiện chuyên môn của tôi trong Vue.JS và phát triển web.",
+    "resume": "Hồ sơ",
+    "contact": "Liên hệ"
+  },
+  "about": {
+    "seo": {
+      "title": "Thái Sơn {'|'} Trang Giới Thiệu"
     },
-    "home": {
-    
+    "title": "Làm Hết Sức Chơi Hết Mình !",
+    "description1": "Xin chào, tôi là Thái Sơn, một nhà phát triển web và nhà thiết kế UI/UX với niềm đam mê tạo ra những trải nghiệm kỹ thuật số chức năng và thân thiện với người dùng. Với 3 năm kinh nghiệm, bao gồm 2,5 năm chuyên về Vue.js và Nuxt.js, tôi tập trung vào việc biến ý tưởng của khách hàng thành các giải pháp hiệu quả và hấp dẫn về mặt hình ảnh.",
+    "description2": "Đối với tôi, thiết kế không chỉ là về vẻ ngoài—mà còn về việc giải quyết các vấn đề thực tế và tạo ra trải nghiệm mượt mà, thú vị cho người dùng. Tôi kết hợp sự sáng tạo với hiểu biết sâu sắc về nhu cầu của người dùng để xây dựng các sản phẩm kỹ thuật số không chỉ đẹp mắt mà còn hoạt động một cách liền mạch.",
+    "description3": "Cho dù đó là một trang web, ứng dụng di động, hay bất kỳ sản phẩm kỹ thuật số nào khác, tôi mang đến cam kết về thiết kế chất lượng cao và tư duy lấy người dùng làm trung tâm cho mọi dự án. Tôi rất hào hứng được mang kỹ năng và niềm đam mê của mình vào dự án tiếp theo của bạn.",
+    "biography": "Tiểu sử",
+    "yoe": "Năm Kinh Nghiệm",
+    "project-completed": "Dự Án Đã Hoàn Thành",
+    "blog-written": "Bài Blog Đã Viết",
+    "skills": "Kỹ Năng",
+    "skill": {
+      "web": "Web",
+      "html": "HTML",
+      "css": "CSS",
+      "js": "Javascript",
+      "vue": "VueJS",
+      "nuxt": "NuxtJS",
+      "docker": "Docker",
+      "github-action": "Github Action",
+      "aws": "AWS",
+      "strapi": "Strapi",
+      "graphql": "GraphQL",
+      "jest": "Jest",
+      "vitest": "Vitest",
+      "ci-cd": "CI/CD"
+    },
+    "experience": {
+      "title": "Kinh Nghiệm",
+      "front-end": "Lập Trình Viên Front-end",
+      "back-end": "Lập Trình Viên Back-end",
+      "full-stack": "Lập Trình Viên Fullstack",
+      "dayone-description": "Làm việc trong một nhóm chịu trách nhiệm nâng cao giao diện người dùng với Nuxt.js, chiến lược tận dụng SSR để tăng cường tối ưu hóa SEO, và đổi mới thông qua việc phát triển một CMS headless để quản lý nội dung động.",
+      "burningbros-description": "Làm việc như một phần của nhóm để nâng cao giao diện người dùng sử dụng Nuxt.js, với trọng tâm là xây dựng một codebase sạch và có thể mở rộng. Dẫn đầu trong việc tối ưu hóa hiệu suất ứng dụng bằng cách triển khai các kỹ thuật như chia nhỏ mã, tải lười biếng và bộ nhớ đệm. Đóng góp vào việc tinh chỉnh trải nghiệm người dùng và đảm bảo giao diện mượt mà, phản hồi nhanh.",
+      "fpt-description2": "Làm việc trong một nhóm chịu trách nhiệm nâng cao giao diện người dùng với Vue.js, tiên phong trong việc phát triển API RESTful thông qua Java Spring Boot, tối ưu hóa hệ thống cơ sở dữ liệu, và tích cực tham gia vào phương pháp Agile để hợp lý hóa việc hoàn thành dự án.",
+      "fpt-description1": "Làm việc trong một nhóm chịu trách nhiệm nâng cao các dự án web sử dụng PHP, tập trung vào trải nghiệm người dùng động. Tôi đã tạo ra và thực thi các truy vấn SQL để phân tích dữ liệu sâu. Trong một nhóm Agile, tôi đã đóng góp vào các cột mốc quan trọng thông qua các cuộc họp hợp tác và đóng góp chiến lược."
     }
-    
+  },
+  "projects": {
+    "seo": {
+      "title": "Thái Sơn {'|'} Trang Dự Án"
+    },
+    "title": "Dự Án Cá Nhân",
+    "featured-project": "Dự Án Nổi Bật",
+    "visit-project": "Truy Cập Dự Án",
+    "visit": "Truy cập",
+    "featured-project-title": "Ứng Dụng Theo Dõi Tiền Điện Tử",
+    "featured-project-description": "Một ứng dụng Theo Dõi Tiền Điện Tử đầy tính năng sử dụng React, Tailwind CSS, Context API, React Router và Recharts. Nó hiển thị chi tiết về hầu hết các loại tiền điện tử. Bạn có thể dễ dàng chuyển đổi giá thành tiền tệ địa phương của mình.",
+    "project-title": "Trang Web Portfolio React"
+  },
+  "footer": {
+    "name": "Thái Sơn",
+    "build-with": "Được Xây Dựng Bởi",
+    "say-hello": "Gửi lời chào",
+    "all-right-reserved": "Đã Đăng Ký Bản Quyền",
+    "hire-me": "Thuê tôi"
+  }
 }

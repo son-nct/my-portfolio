@@ -16,9 +16,9 @@
         }
       }
     }"
-    class="w-full mt-64 font-bold text-center text-8xl"
+    class="w-full mt-64 mb-16 font-bold text-center text-8xl"
   >
-    Skills
+    {{ t('about.skills') }}
   </h2>
   <div
     class="relative flex items-center justify-center w-full h-screen rounded-full bg-circularLight"

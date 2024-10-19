@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         families: {
             'Montserrat': '300..700',
         },
-        subsets: ['latin'],
+        subsets: ['latin', 'vietnamese'],
         outputDir: 'assets',
         download: true,
         inject: true,

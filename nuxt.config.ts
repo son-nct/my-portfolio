@@ -28,9 +28,4 @@ export default defineNuxtConfig({
             apiBaseUrl: NUXT_API_BASE_URL
         }
     },
-    routeRules: {
-        '/': { prerender: true },
-        '/about': { prerender: true },
-        '/projects': { prerender: true },
-    }
 });

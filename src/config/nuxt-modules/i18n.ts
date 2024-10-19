@@ -6,6 +6,11 @@ const locales = [
         code: 'en',
         iso: 'en',
         file: 'en.json'
+    },
+    {
+        code: 'vi',
+        iso: 'vi-VN',
+        file: 'vi.json'
     }
 ]
 

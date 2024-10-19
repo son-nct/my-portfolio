@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "blog": "Blog"
+    "blogs": "Blogs"
   },
   "home": {
     "title": "Turning Vision Into Reality With Code And Design.",
@@ -23,6 +23,7 @@
     "yoe": "Years Of Experiences",
     "project-completed": "Projects Completed",
     "blog-written": "Blog Written",
+    "skills": "Skills",
     "skill": {
       "web": "Web",
       "html": "HTML",
