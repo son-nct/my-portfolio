@@ -50,6 +50,18 @@
       "fpt-description1": "Worked on a team responsible for enhancing web projects using PHP, focusing on dynamic user experiences. I crafted and executed SQL queries for deep data analysis. Within an agile team, I contributed to key milestones through collaborative meetings and strategic input."
     }
   },
+  "projects": {
+    "seo": {
+      "title": "Thai Son {'|'} Projects Page"
+    },
+    "title": "No Pain, No Gain",
+    "featured-project": "Featured Project",
+    "visit-project": "Visit Project",
+    "visit": "Visit",
+    "featured-project-title": "Crypto Screener Application",
+    "featured-project-description": "A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency.",
+    "project-title": "React Portfolio Website"
+  },
   "footer": {
     "name": "Thai Son",
     "build-with": "Build With",

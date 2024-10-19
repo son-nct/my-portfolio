@@ -45,7 +45,8 @@
           <p class="font-medium">{{ t('about.description3') }}</p>
         </div>
         <div
-          class="relative col-span-3 p-8 border-2 border-solid border-dark h-max rounded-2xl bg-light shadow-custom"
+          class="relative col-span-3 p-8 border-2 border-solid border-dark rounded-2xl bg-light shadow-custom"
+          style="aspect-ratio: 1 / 1; overflow: hidden"
         >
           <NuxtImg
             sizes="sm:200px md:500px 2xl:550px"
@@ -53,7 +54,7 @@
             src="/images/avt_about.jpg"
             format="webp"
             alt="ThaiSon"
-            class="w-full h-auto"
+            class="object-cover w-full h-full"
             preload
           />
         </div>
