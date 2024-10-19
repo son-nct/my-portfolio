@@ -23,7 +23,7 @@ export default {
         'spin-slow': 'spin 8s linear infinite'
       },
       boxShadow: {
-        custom: '8px 8px 0 4px rgba(0, 0, 0, 1)'
+        custom: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 8px 8px 0 4px rgba(0, 0, 0, 1)'
       },
       backgroundImage: {
         circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px, #f5f5f5 100px)'
